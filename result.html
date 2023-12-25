@@ -386,8 +386,7 @@
 	</div>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://www.flotcharts.org/flot/jquery.flot.js"></script>
-	<script src="http://www.flotcharts.org/flot/jquery.flot.pie.js"></script>
+
 	<script src="./js/jquery_min.js"></script>
 	<script src="./js/highcharts.js"></script>
 	<script src="./js/circle.js"></script>
@@ -405,10 +404,25 @@
 	<script>
 		window.onload = function (params) {
 			var inpP = document.querySelectorAll(".form-multi-select-search")
+			var close = document.querySelectorAll(".form-multi-select-selection-cleaner")
 			inpP[0].setAttribute('placeholder','國家')
 			inpP[1].setAttribute('placeholder','申請機關')
 			inpP[2].setAttribute('placeholder','IPC 分類')
-			console.log('asdf', aaa);
+
+			for (let i = 0; i < close.length; i++) {
+				const element = close[i];
+				element.onclick = function () {
+					if(i==0){
+						inpP[0].setAttribute('placeholder','國家')
+					}
+					if(i==1){
+						inpP[1].setAttribute('placeholder','申請機關')
+					}
+					if(i==2){
+						inpP[2].setAttribute('placeholder','IPC 分類')
+					}
+				}
+			}
 		}
 
 	</script>

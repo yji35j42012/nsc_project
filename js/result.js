@@ -7,7 +7,6 @@ var hlogo = document.querySelector("#hlogo");
 
 
 window.addEventListener('scroll', function (params) {
-    console.log('html.scrollTop', html.scrollTop);
     if (html.scrollTop > 80) {
         searchBar.classList.add('fixed');
         hlogo.classList.add('hide')
@@ -46,7 +45,6 @@ var pupup = document.querySelector("#pupup")
 var pupup_close = document.querySelector("#pupup_close")
 
 var result_item = document.querySelectorAll("[name='result_item']")
-console.log('result_item', result_item);
 for (let i = 0; i < result_item.length; i++) {
     const element = result_item[i];
     element.onclick = function () {
@@ -142,13 +140,11 @@ for (let i = 0; i < circleData.data.length; i++) {
     li.append(li_child2)
     result_circleColor.append(li)
 }
-console.log('circleData', circleData.data[0].ns);
 
 
 var searchBar_inp = document.querySelector("#searchBar_inp")
 
 searchBar_inp.addEventListener("keyup", function (e) {
-    console.log('asdf',e);
 if (e.keyCode == 13) {
     location.href = './result.html'
 }
