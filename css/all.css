@@ -528,7 +528,7 @@ h2 {
 }
 
 .line {
-  padding: 120px 0;
+  padding: 120px 0 70px;
 }
 .line_group {
   display: flex;
