@@ -1,9 +1,9 @@
 @charset "UTF-8";
-.icon_btn {
+.result_page_item, .result_item, .icon_btn {
   transition: all 0.3s ease-in-out;
 }
 
-.icon_btn {
+.result_page_item, .result_sel_item, .result_sel .selTxt, .icon_btn {
   cursor: pointer;
 }
 
@@ -100,6 +100,7 @@ h2 {
   left: 0;
   right: -136px;
   margin: auto;
+  transform: translateY(0%);
 }
 .searchBar_inp {
   width: 100%;
@@ -353,6 +354,9 @@ h2 {
   flex: none;
   width: 420px;
 }
+.recently_left ._enterprise {
+  min-height: 256px;
+}
 .recently_right {
   position: relative;
   width: 100%;
@@ -589,6 +593,7 @@ h2 {
   position: relative;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 30px;
   padding: 30px 20px;
 }
@@ -661,6 +666,238 @@ h2 {
   /* 32.32px */
   text-transform: uppercase;
 }
+.result_circle {
+  width: 100%;
+  max-width: 556px;
+}
+.result_filter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1210px;
+  margin: auto;
+}
+.result_sel {
+  position: relative;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  width: 100%;
+  max-width: 390px;
+  height: 42px;
+  padding-left: 10px;
+  border-radius: 6px;
+  border: 1px solid #D3D3D3;
+  background-color: #FFF;
+}
+.result_sel + .result_sel {
+  margin-left: 20px;
+}
+.result_sel .selTxt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  width: calc(100% - 40px);
+  height: 100%;
+  padding-left: 10px;
+  line-height: 16px;
+}
+.result_sel .selTxt span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.result_sel_group {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  display: none;
+  width: 100%;
+  max-height: 282px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #BCBCBC;
+  background-color: #FFF;
+}
+.result_sel_group::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f1f1f1;
+}
+.result_sel_group::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border: 1px #f1f1f1 solid;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: background 0.5s linear;
+  transition: background 0.5s linear;
+}
+.result_sel_group:hover::-webkit-scrollbar-thumb {
+  background-color: #a9a9a9;
+}
+.result_sel_group::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+.showGroup .result_sel_group {
+  display: block;
+}
+.result_sel_item {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  padding: 5px;
+}
+.result_sel_item span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  padding: 4px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/icon_checkbox_empty.svg");
+}
+.result_sel_item input:checked + span {
+  background-image: url("../images/icon_checkbox.svg");
+}
+.result_sel_item input {
+  display: none;
+}
+.result_arr {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+.result_group {
+  width: 100%;
+  max-width: 1210px;
+  margin: 30px auto 0;
+}
+.result_item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #E1E1E1;
+  background-color: #FFF;
+}
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .result_item:hover {
+    background-color: #EDEDED;
+  }
+}
+.result_item:active {
+  background-color: #EDEDED;
+}
+.result_item + .result_item {
+  margin-top: 12px;
+}
+.result_item_txt {
+  color: #545454;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.result_item_txt::before {
+  color: #545454;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.result_item_txt.name {
+  display: flex;
+  width: 100%;
+  margin-bottom: 14px;
+}
+.result_item_txt.name::before {
+  white-space: nowrap;
+}
+.result_item_txt.country {
+  width: 270px;
+}
+.result_item_txt.com {
+  width: 330px;
+}
+.result_item_txt.num {
+  width: calc(100% - 270px - 330px);
+}
+.result_item_txt.date {
+  width: 270px;
+  margin-top: 14px;
+}
+.result_item_txt.sort {
+  width: calc(100% - 270px);
+  margin-top: 14px;
+}
+.result_page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1210px;
+  margin: 50px auto 0;
+  padding-bottom: 120px;
+}
+.result_page_item {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: #fff;
+}
+.result_page_item + .result_page_item {
+  margin-left: 5px;
+}
+.result_page_item.on {
+  border: 1px solid #E1E1E1;
+  background: #E1E1E1;
+}
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .result_page_item:hover {
+    border-color: #E1E1E1;
+  }
+}
+.result_page_item:active {
+  border-color: #E1E1E1;
+}
+.result_page_item.prev::before, .result_page_item.next::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/icon_down.svg");
+}
+.result_page_item.prev::before {
+  transform: rotate(90deg);
+}
+.result_page_item.next::before {
+  transform: rotate(-90deg);
+}
 
 .highcharts-background,
 .highcharts-plot-background,
@@ -671,6 +908,11 @@ h2 {
 
 .highcharts-text-outline {
   stroke: #f1f2f7 !important;
+}
+
+.line .highcharts-text-outline {
+  stroke: transparent !important;
+  display: none !important;
 }
 
 .highcharts-title,

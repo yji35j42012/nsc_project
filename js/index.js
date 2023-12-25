@@ -15,3 +15,7 @@ window.addEventListener('scroll', function (params) {
         hlogo.classList.remove('hide')
     }
 });
+var searchHandler = document.querySelector("#searchHandler");
+searchHandler.onclick = function (params) {
+    location.href= "result.html"
+}
