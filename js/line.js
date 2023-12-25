@@ -88,7 +88,7 @@ Highcharts.chart('container1', {
         gridLineWidth: 1,
     },
     yAxis: {
-        min: 0,
+        min: 10000,
         max: 20000,
         title: {
             text: '單位：件數'
