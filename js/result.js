@@ -7,7 +7,7 @@ var hlogo = document.querySelector("#hlogo");
 
 
 window.addEventListener('scroll', function (params) {
-    console.log('html.scrollTop',html.scrollTop);
+    console.log('html.scrollTop', html.scrollTop);
     if (html.scrollTop > 80) {
         searchBar.classList.add('fixed');
         hlogo.classList.add('hide')
@@ -40,3 +40,106 @@ for (let i = 0; i < selHandler.length; i++) {
 
     }
 }
+
+
+var alert = document.querySelector("#alert")
+var alert_close = document.querySelector("#alert_close")
+
+var result_item = document.querySelectorAll("[name='result_item']")
+console.log('result_item', result_item);
+for (let i = 0; i < result_item.length; i++) {
+    const element = result_item[i];
+    element.onclick = function () {
+        alert.classList.add("on")
+    }
+}
+alert_close.onclick = function () {
+    alert.classList.remove("on")
+}
+
+
+
+var circleData = {
+    //圓餅圖對應顏色
+    color: ['#B567DA', '#679CDA', '#DA6767', '#7E67DA', '#67DAA3',],
+    //圓餅圖資料放置處
+    data: [
+        { y: 30, n: "30%", ns: "台灣大學(35) 30%", cn: "#B567DA" },
+        { y: 25, n: "25%", ns: "國立師範大學(18) 25%", cn: "#679CDA" },
+        { y: 22, n: "22%", ns: "政治大學(7) 22%", cn: "#DA6767" },
+        { y: 18, n: "18%", ns: "中央研究院(5) 18%", cn: "#7E67DA" },
+        { y: 5, n: "5%", ns: "輔仁大學(1) 5%", cn: "#67DAA3" },
+    ]
+}
+
+$(document).ready(function () {
+    Highcharts.setOptions({
+        colors: circleData.color
+    });
+    var chart = {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    }
+    var accessibility = {
+        point: {
+            valueSuffix: '%'
+        }
+    }
+    var plotOptions = {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            animation: false,
+            dataLabels: {
+                enabled: true,
+                format: `
+                <span class="point_title" style="position: absolute; top:20px; opacity: 01;">{point.ns}</span>
+                <br>  <br>
+                <span class='point_num' style='color:{point.cn}'>{point.n}</span>
+                
+                `,
+                // format: '{point.percentage:.1f} %', //會出現小數點
+                connectorColor: 'silver',
+                style: {
+                    fontSize: '20px',
+                    color: '#5e5e5e',
+                    fontFamily: 'MicrosoftJhengHei',
+                },
+                distance: 3,//文字與圓餅圖距離
+            }
+        }
+    }
+    var series = [{
+        data: circleData.data,
+        size: '90%',
+        innerSize: "70%",
+    }]
+    var json = {};
+    json.chart = chart;
+    json.accessibility = accessibility;
+    json.plotOptions = plotOptions;
+    json.series = series;
+    $('#circleContainer').highcharts(json);
+})
+
+
+
+var result_circleColor = document.querySelector("#result_circleColor");
+
+
+for (let i = 0; i < circleData.data.length; i++) {
+    var li = document.createElement('li')
+    var li_child1 = document.createElement("div")
+    li_child1.setAttribute("class", "colorBox")
+    li_child1.style=`background:${circleData.data[i].cn}`
+    var li_child2 = document.createElement("div")
+    li_child2.setAttribute("class", "colorTitle")
+    li_child2.innerHTML = circleData.data[i].ns
+
+    li.append(li_child1)
+    li.append(li_child2)
+    result_circleColor.append(li)
+}
+console.log('circleData', circleData.data[0].ns);

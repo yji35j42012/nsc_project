@@ -25,21 +25,19 @@ Highcharts.chart('container', {
         title: {
             text: '單位：億'
         },
-        // labels: [0,150],
-        // categories:['0','150']
-        // categories: ['0', '15000', '17000', '19000', '21000', '23000', '25000', '27000', '28000', '30000', '32000', '34000']
+        tickAmount: 12,
     },
     plotOptions: {
         line: {
             dataLabels: {
                 enabled: true
             },
-            enableMouseTracking: false
+            enableMouseTracking: true
         }
     },
     series: [{
         // name: 'Reggane',
-        data: [27382, 27312, 28399, 27600, 29167, 17982, 31333, 31700, 31166, 29494,]
+        data: [273.82, 273.12, 283.99, 276.00, 291.67, 179.82, 313.33, 317.00, 311.66, 294.94,]
     },]
 });
 
@@ -70,6 +68,7 @@ Highcharts.chart('container1', {
         title: {
             text: '單位：件數'
         },
+        tickAmount: 12,
         tickmarkPlacement: 'on',
         scrollbar: {
             enabled: true,
@@ -122,6 +121,7 @@ Highcharts.chart('container2', {
         title: {
             text: '單位：件數'
         },
+        tickAmount: 12,
         // tickPositioner() {
         //     return [0, 1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000];
         //   },

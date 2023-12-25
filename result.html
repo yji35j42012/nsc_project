@@ -74,6 +74,19 @@
 			</div>
 			<div class="result_circle">
 				<div class="result_title">前五大申請機關</div>
+				<div class="result_circleInfo">
+					<div id="circleContainer" class="result_circleContainer"></div>
+					<ul id="result_circleColor" class="result_circleColor">
+						<!-- <li>
+							<div class="colorBox"></div>
+							<div class="colorTitle">台灣大學(35) 30%</div>
+						</li>
+						<li>
+							<div class="colorBox"></div>
+							<div class="colorTitle">台灣大學(35) 30%</div>
+						</li> -->
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="result_info">
@@ -226,7 +239,7 @@
 			</div>
 
 			<ul class="result_group">
-				<li class="result_item">
+				<li class="result_item" name="result_item">
 					<div class="result_item_txt msgl name" data-msgl="專利名稱：">腫瘤標靶胜肽及其用於檢測及治療癌症之用途</div>
 					<div class="result_item_txt msgl country" data-msgl="國家：">臺灣</div>
 					<div class="result_item_txt msgl com" data-msgl="申請機關：">臺灣大學</div>
@@ -234,17 +247,19 @@
 					<div class="result_item_txt msgl date" data-msgl="授證日期：">2014/03/21</div>
 					<div class="result_item_txt msgl sort" data-msgl="主要IPC分類：">人類生活需要</div>
 				</li>
-				<li class="result_item">
+				<li class="result_item" name="result_item">
 					<div class="result_item_txt msgl name" data-msgl="專利名稱：">
-						奈米顆粒的製造方法 fabrication meth od of nanoparti cle奈米顆粒的製造方法fabrication meth od of nanoparti cle奈米顆粒的製造  方法 fabrication meth odof nanoparti cle奈米顆粒的製造方法
+						奈米顆粒的製造方法 fabrication meth od of nanoparti cle奈米顆粒的製造方法fabrication meth od of nanoparti
+						cle奈米顆粒的製造  方法 fabrication meth odof nanoparti cle奈米顆粒的製造方法
 					</div>
 					<div class="result_item_txt msgl country" data-msgl="國家：">臺灣</div>
 					<div class="result_item_txt msgl com" data-msgl="申請機關：">臺灣大學</div>
-					<div class="result_item_txt msgl num" data-msgl="專利證號：">US8,753,559 B2US8,753,559 B2US8,753,559 B2US</div>
+					<div class="result_item_txt msgl num" data-msgl="專利證號：">US8,753,559 B2US8,753,559 B2US8,753,559 B2US
+					</div>
 					<div class="result_item_txt msgl date" data-msgl="授證日期：">2014/03/21</div>
 					<div class="result_item_txt msgl sort" data-msgl="主要IPC分類：">機械工程；照明；供熱；武器；爆破</div>
 				</li>
-				<li class="result_item">
+				<li class="result_item" name="result_item">
 					<div class="result_item_txt msgl name" data-msgl="專利名稱：">腫瘤標靶胜肽及其用於檢測及治療癌症之用途</div>
 					<div class="result_item_txt msgl country" data-msgl="國家：">臺灣</div>
 					<div class="result_item_txt msgl com" data-msgl="申請機關：">臺灣大學</div>
@@ -252,13 +267,15 @@
 					<div class="result_item_txt msgl date" data-msgl="授證日期：">2014/03/21</div>
 					<div class="result_item_txt msgl sort" data-msgl="主要IPC分類：">人類生活需要</div>
 				</li>
-				<li class="result_item">
+				<li class="result_item" name="result_item">
 					<div class="result_item_txt msgl name" data-msgl="專利名稱：">
-						奈米顆粒的製造方法 fabrication meth od of nanoparti cle奈米顆粒的製造方法fabrication meth od of nanoparti cle奈米顆粒的製造  方法 fabrication meth odof nanoparti cle奈米顆粒的製造方法
+						奈米顆粒的製造方法 fabrication meth od of nanoparti cle奈米顆粒的製造方法fabrication meth od of nanoparti
+						cle奈米顆粒的製造  方法 fabrication meth odof nanoparti cle奈米顆粒的製造方法
 					</div>
 					<div class="result_item_txt msgl country" data-msgl="國家：">臺灣</div>
 					<div class="result_item_txt msgl com" data-msgl="申請機關：">臺灣大學</div>
-					<div class="result_item_txt msgl num" data-msgl="專利證號：">US8,753,559 B2US8,753,559 B2US8,753,559 B2US</div>
+					<div class="result_item_txt msgl num" data-msgl="專利證號：">US8,753,559 B2US8,753,559 B2US8,753,559 B2US
+					</div>
 					<div class="result_item_txt msgl date" data-msgl="授證日期：">2014/03/21</div>
 					<div class="result_item_txt msgl sort" data-msgl="主要IPC分類：">機械工程；照明；供熱；武器；爆破</div>
 				</li>
@@ -298,6 +315,34 @@
 						<a href="https://www.stpi.narl.org.tw/public/privacy_policy" target="_blank">隱私權及資訊安全政策</a>
 					</li>
 				</ul>
+			</div>
+		</div>
+
+
+
+		<!-- 打開加上on -->
+		<div id="alert" class="alert">
+			<div class="alert_box">
+				<div class="alert_head">
+					<div class="alert_head_title">腫瘤標靶胜肽及其用於檢測及治療癌症之用途腫瘤標靶胜肽及其用於檢測及治療癌症之用途腫瘤標靶胜肽及其用於</div>
+					<button id="alert_close" class="icon_btn _close"></button>
+				</div>
+				<div class="alert_body _flex">
+					<div class="alert_list" data-txt="專利證號：">I431014</div>
+					<div class="alert_list" data-txt="授證日期：">2014/03/21</div>
+					<div class="alert_list" data-txt="申請國：">臺灣</div>
+					<div class="alert_list" data-txt="申請機關：">申中央研究院中央研究院中央研究院中央</div>
+					<div class="alert_list" data-txt="單位聯絡方式：">智財技轉處</div>
+					<div class="alert_list" data-txt="單位電話：">+886-2-2787-2554</div>
+					<div class="alert_list" data-txt="單位網址：">https://iptt.sinica.edu.tw</div>
+					<div class="alert_list _full" data-txt="備註：">本部(收文號1100010775)同意該院110年2月22日智財字第1100501424號函申請終止維護專利
+						（中央研究院）</div>
+					<div class="alert_list _full" data-txt="技術說明：">
+						本發明係提供一種靶向癌幹細胞的合成胜肽。該胜肽係由SEQ ID NO：1至SEQ ID NO：15中
+						任一者之胺基酸序列組成。本發明亦提供一種組合物，包含所述合成胜肽，其具有接合至其上之治療劑，以及一醫藥上可接受之載體或稀釋劑。本發明更提供一種篩選特異性靶向癌幹細胞 
+						之胜肽的方法。該方法之步驟包含利用噬菌體表現系統建立寡胜肽庫、以癌細胞株之腫瘤實質細胞培養物接觸該庫、以該癌細胞株之癌幹細胞培養物接觸未結合至該腫瘤實質細胞之噬菌體、及由結合至癌幹細胞之噬菌體篩選特異性靶向癌幹細胞之胜肽。
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
