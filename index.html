@@ -5,18 +5,193 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>國科會補助研發專利成果查詢</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/all.min.css">
 </head>
 
 <body>
+	<div id="text"></div>
 	<div class="wrap">
 		<div class="header">
-			<div class="logo">
+			<div id="hlogo" class="logo msgr" data-msgr="國科會補助研發專利成果查詢">
 				<img src="./images/logo.svg" alt="">
+			</div>
+			<button class="icon_btn _home"></button>
+		</div>
+		<div class="banner">
+			<img src="./images/banner.png" alt="">
+			<div class="banner_txt">
+				<h1>
+					Embark on the path of
+					patent exploration
+				</h1>
+				<p>unlocking the potential for innovation</p>
+				<div id="searchBar" class="searchBar">
+					<input type="text" class="searchBar_inp" placeholder="請輸入相關計畫、專利、專利所有人、學校、國別...等">\
+					<button class="icon_btn _search"></button>
+				</div>
+			</div>
+		</div>
+		<div class="ten">
+			<div class="ten_left">
+				<div class="card _green _fending">
+					<i class="icon _fending"></i>
+					<div class="card_txt">近10年補助計畫總經費</div>
+					<div class="card_num msgr" data-msgr="元">281,540,543,770</div>
+				</div>
+				<div class="card _white _case">
+					<i class="icon _case"></i>
+					<div class="card_txt">近10年補助計畫總案件數</div>
+					<div class="card_num msgr" data-msgr="件">144,232</div>
+				</div>
+				<div class="ten_title">國科會近10年研發補助投入</div>
+			</div>
+			<div class="ten_right">
+				<div class="card _white _patent">
+					<i class="icon _patent"></i>
+					<div class="card_group">
+						<div class="card_txt">產生專利</div>
+						<div class="card_num msgr" data-msgr="件">18,431</div>
+					</div>
+				</div>
+				<div class="card _white _enterprise">
+					<i class="icon _case"></i>
+					<div class="card_group">
+						<div class="card_txt">企業共同參與研發計畫數</div>
+						<div class="card_num msgr" data-msgr="件">7,985</div>
+					</div>
+					<div class="card_detail">平均每件企業參與的計畫投入金額</div>
+					<div class="card_num msgr" data-msgr="元">610608.1</div>
+					<div class="card_num msgl msgr" data-msgl="產生專利" data-msgr="件">9,461</div>
+				</div>
+			</div>
+		</div>
+		<div class="ten_bg"></div>
+		<div class="recently">
+			<div class="recently_content">
+				<div class="recently_left">
+					<div class="card _white _patent">
+						<i class="icon _patent"></i>
+						<div class="card_group">
+							<div class="card_txt">產生專利</div>
+							<div class="card_num msgr" data-msgr="件">1,843</div>
+						</div>
+					</div>
+					<div class="card _white _enterprise">
+						<i class="icon _case"></i>
+						<div class="card_group">
+							<div class="card_txt">企業共同參與研發計畫數</div>
+							<div class="card_num msgr" data-msgr="件">767</div>
+						</div>
+						<div class="card_detail">平均每件企業參與的計畫投入金額</div>
+						<div class="card_num msgr" data-msgr="元">825014.2</div>
+						<div class="card_num msgl msgr" data-msgl="產生專利" data-msgr="件">629</div>
+					</div>
+				</div>
+				<div class="recently_right">
+					<div class="recently_title">最近1年度研發補助投入</div>
+					<div class="card _white _case">
+						<i class="icon _case"></i>
+						<div class="card_txt">最近1年補助計畫案件數</div>
+						<div class="card_num msgr" data-msgr="件">13,835</div>
+					</div>
+					<div class="card _green _fending">
+						<i class="icon _fending"></i>
+						<div class="card_txt">最近1年補助計畫經費</div>
+						<div class="card_num msgr" data-msgr="元">29,494,804,492</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="most">
+			<h2>前五大擁有專利數最多的學校</h2>
+			<ul class="most_group">
+				<li class="most_item" data-num="4">
+					<div class="most_item_title">成功大學</div>
+					<div class="most_item_num" data-txt="件專利">123</div>
+				</li>
+				<li class="most_item" data-num="2">
+					<div class="most_item_title">清華大學</div>
+					<div class="most_item_num" data-txt="件專利">929</div>
+				</li>
+				<li class="most_item" data-num="1">
+					<div class="most_item_title">臺灣大學</div>
+					<div class="most_item_num" data-txt="件專利">1,088</div>
+				</li>
+				<li class="most_item" data-num="3">
+					<div class="most_item_title">陽明交大</div>
+					<div class="most_item_num" data-txt="件專利">576</div>
+				</li>
+				<li class="most_item" data-num="5">
+					<div class="most_item_title">城市科大</div>
+					<div class="most_item_num" data-txt="件專利">66</div>
+				</li>
+			</ul>
+		</div>
+		<div class="circle">
+			<h2>本國與國際專利申請數比</h2>
+			<div class="circle_group">
+				<div class="circle_item" data-txt="過去9年">
+					<div id="circleContainer"></div>
+				</div>
+				<div class="circle_item" data-txt="2021">
+					<div id="circleContainer1"></div>
+				</div>
+			</div>
+		</div>
+		<div class="line">
+			<h2>相關圖表</h2>
+			<div class="line_group">
+				<div class="line_item">
+					<div id="container"></div>
+					<div class="line_item_title">每年國科會研發投入經費</div>
+				</div>
+				<div class="line_item">
+					<div id="container1"></div>
+					<div class="line_item_title">每年國科會專題計畫</div>
+				</div>
+				<div class="line_item">
+					<div id="container2"></div>
+					<div class="line_item_title">每年提出申請專利案</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="logo"><img src="./images/logo.svg" alt=""></div>
+			<div class="footer_group">
+				<ul>
+					<li>指導單位：國家科學及技術委員會</li>
+					<li>執行單位：財團法人國家實驗研究院科技政策研究與資訊中心</li>
+				</ul>
+				<ul>
+					<li>地址：(106-36) 臺北市和平東路二段106號1,14-15樓</li>
+					<li>電話：(02)2737-7769</li>
+					<li>傳真：(02)2737-7836</li>
+					<li>Email：nudge@narlabs.org.tw</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="https://www.stpi.narl.org.tw/public/privacy_policy" target="_blank">隱私權及資訊安全政策</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://www.flotcharts.org/flot/jquery.flot.js"></script>
+	<script src="http://www.flotcharts.org/flot/jquery.flot.pie.js"></script>
+	<script src="./js/jquery_min.js"></script>
+	<script src="./js/highcharts.js"></script>
+	<script src="./js/circle.js"></script>
+	<script src="./js/line.js"></script>
+	<script src="./js/scroll.js"></script>
 </body>
 
 </html>
