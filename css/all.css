@@ -56,6 +56,9 @@ h2 {
 .icon._enterprise {
   background-image: url("../images/icon_enterprise.svg");
 }
+.icon._share {
+  background-image: url("../images/icon_share.svg");
+}
 
 .icon_btn {
   width: 32px;
@@ -202,7 +205,7 @@ h2 {
   max-width: 1440px;
   height: 521px;
   margin: auto;
-  padding: 0 78px;
+  padding: 0 70px;
 }
 .ten_bg {
   width: 100%;
@@ -251,7 +254,7 @@ h2 {
   display: inline-block;
   width: 100%;
   min-height: 286px;
-  padding: 30px;
+  padding: 29px;
   border-radius: 20px;
   box-shadow: 15px 44px 50px 0px rgba(28, 71, 47, 0.15);
   background-color: #fff;
@@ -276,7 +279,7 @@ h2 {
   margin-top: 18px;
 }
 .card._fending {
-  width: 420px;
+  width: 435px;
 }
 .card._case {
   width: 330px;
