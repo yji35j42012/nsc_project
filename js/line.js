@@ -58,7 +58,6 @@ Highcharts.chart('container', {
         dataLabels: {
             enabled: true,
             formatter: function () {
-                console.log(this); // 會有五次console，每一次代表一個數據點
                 return this.y // 數據點物件中 y 屬性即數據點數值
             }
         }

@@ -23,7 +23,6 @@ searchHandler.onclick = function (params) {
 var searchBar_inp = document.querySelector("#searchBar_inp")
 
 searchBar_inp.addEventListener("keyup", function (e) {
-        console.log('asdf',e);
     if (e.keyCode == 13) {
         location.href = './result.html'
     }
