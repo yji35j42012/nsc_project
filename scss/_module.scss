@@ -138,7 +138,7 @@ h2 {
 	// background-color: #F1F2F7;
 }
 
-.header {
+.head {
 	z-index: 2;
 	position: fixed;
 	top: 0;
@@ -1261,4 +1261,25 @@ h2 {
 			width: 100%;
 		}
 	}
+}
+
+.form-multi-select{
+	max-width: 390px;
+	height: 42px !important;
+}
+.form-multi-select+.form-multi-select{
+	margin-left: 20px;
+
+}
+.form-multi-select.show .form-multi-select-search[size],
+.form-multi-select-selection:empty{
+	display: none !important;
+}
+.form-multi-select-selection{
+	display: inline-block !important;
+	overflow: hidden;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
 }

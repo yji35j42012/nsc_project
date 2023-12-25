@@ -12,12 +12,17 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/all.min.css">
+	<link rel="stylesheet" href="./css/coreui.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.3.2/dist/css/coreui.min.css" rel="stylesheet"
+		integrity="sha384-H8oVKJOQVGGCdfFNM+9gLKN0xagtq9oiNLirmijheEuqD3kItTbTvoOGgxVKqNiB" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.4/dist/css/coreui.min.css" rel="stylesheet"
+		integrity="sha384-N6/iVUKuB1Y9fhC3xnBbekegSwfXwMNEIvMxNyYLO6z9vmfxMyEwPNsH0k+p4beB" crossorigin="anonymous">
 </head>
 
 <body>
 	<div id="text"></div>
 	<div class="wrap result">
-		<div class="header">
+		<div class="head">
 			<a id="hlogo" class="logo msgr" data-msgr="國科會補助研發專利成果查詢" href="./index.html">
 				<img src="./images/logo.svg" alt="">
 			</a>
@@ -91,7 +96,15 @@
 		</div>
 		<div class="result_info">
 			<div class="result_filter">
-				<label name="selBox" class="result_sel">
+				<select class="form-multi-select" id="multiple-select-text" multiple data-coreui-selection-type="text"
+					data-coreui-search="true">
+					<option value="0">臺灣(35)</option>
+					<option value="1">美國(16)</option>
+					<option value="2">歐洲(13)</option>
+					<option value="3">日本(5)</option>
+					<option value="4">韓國(2)</option>
+				</select>
+				<!-- <label name="selBox" class="result_sel">
 					<div class="selTxt" name="selHandler">
 						<span>國家</span>
 					</div>
@@ -129,8 +142,18 @@
 							韓國(2)
 						</label>
 					</div>
-				</label>
-				<label name="selBox" class="result_sel">
+				</label> -->
+				<select class="form-multi-select" id="multiple-select-text" multiple data-coreui-selection-type="text"
+					data-coreui-search="true">
+					<option value="0">國立臺灣大學(35)</option>
+					<option value="1">國立師範大學(16)</option>
+					<option value="2">國立政治大學</option>
+					<option value="3">輔仁大學</option>
+					<option value="4">中央研究院</option>
+					<option value="5">陽明交通大學</option>
+					<option value="6">清華大學</option>
+				</select>
+				<!--  <label name="selBox" class="result_sel">
 					<div class="selTxt" name="selHandler">
 						<span>國立臺灣大學(35),國立師範大學(16),國立政治大學(13)</span>
 					</div>
@@ -179,8 +202,20 @@
 							清華大學
 						</label>
 					</div>
-				</label>
-				<label name="selBox" class="result_sel">
+				</label> -->
+				<select class="form-multi-select" id="multiple-select-text" multiple data-coreui-selection-type="text"
+					data-coreui-search="true">
+					<option value="0">人類生活需要</option>
+					<option value="1">紡織；造紙</option>
+					<option value="2">作業、運輸</option>
+					<option value="3">固定建築物</option>
+					<option value="4">化學/冶金/組合化學</option>
+					<option value="5">物理</option>
+					<option value="6">電學</option>
+					<option value="7">機械工程/照明/ <br>
+						供熱/武器/爆破</option>
+				</select>
+				<!-- <label name="selBox" class="result_sel">
 					<div class="selTxt" name="selHandler">
 						<span>IPC 分類</span>
 					</div>
@@ -235,7 +270,7 @@
 							供熱/武器/爆破
 						</label>
 					</div>
-				</label>
+				</label> -->
 			</div>
 
 			<ul class="result_group">
@@ -354,6 +389,14 @@
 	<script src="./js/highcharts.js"></script>
 	<script src="./js/circle.js"></script>
 	<script src="./js/result.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.3.2/dist/js/coreui.bundle.min.js"
+		integrity="sha384-yaqfDd6oGMfSWamMxEH/evLG9NWG7Q5GHtcIfz8Zg1mVyx2JJ/IRPrA28UOLwAhi"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.4/dist/js/coreui.bundle.min.js"
+		integrity="sha384-J57aCZcRcbraFuQaL18wp1fDE0fLyO7Il/jKACMovk4ddxUIvjRK5ZZnqcHuBF/T"
+		crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
