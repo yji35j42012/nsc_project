@@ -13,10 +13,11 @@
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/all.min.css">
 	<link rel="stylesheet" href="./css/coreui.min.css">
-	<link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.3.2/dist/css/coreui.min.css" rel="stylesheet"
+
+	<!-- <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.3.2/dist/css/coreui.min.css" rel="stylesheet"
 		integrity="sha384-H8oVKJOQVGGCdfFNM+9gLKN0xagtq9oiNLirmijheEuqD3kItTbTvoOGgxVKqNiB" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.4/dist/css/coreui.min.css" rel="stylesheet"
-		integrity="sha384-N6/iVUKuB1Y9fhC3xnBbekegSwfXwMNEIvMxNyYLO6z9vmfxMyEwPNsH0k+p4beB" crossorigin="anonymous">
+		integrity="sha384-N6/iVUKuB1Y9fhC3xnBbekegSwfXwMNEIvMxNyYLO6z9vmfxMyEwPNsH0k+p4beB" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -95,9 +96,9 @@
 			</div>
 		</div>
 		<div class="result_info">
-			<div class="result_filter">
-				<select class="form-multi-select" id="multiple-select-text" multiple data-coreui-selection-type="text"
-					data-coreui-search="true">
+			<div class="result_filter ">
+				<select class="form-multi-select" id="multiple-select-text" multiple
+					data-coreui-selection-type="text" data-coreui-search="true">
 					<option value="0">臺灣(35)</option>
 					<option value="1">美國(16)</option>
 					<option value="2">歐洲(13)</option>
@@ -143,8 +144,8 @@
 						</label>
 					</div>
 				</label> -->
-				<select class="form-multi-select" id="multiple-select-text" multiple data-coreui-selection-type="text"
-					data-coreui-search="true">
+				<select class="form-multi-select" id="multiple-select-text" multiple
+					data-coreui-selection-type="text" data-coreui-search="true">
 					<option value="0">國立臺灣大學(35)</option>
 					<option value="1">國立師範大學(16)</option>
 					<option value="2">國立政治大學</option>
@@ -203,8 +204,8 @@
 						</label>
 					</div>
 				</label> -->
-				<select class="form-multi-select" id="multiple-select-text" multiple data-coreui-selection-type="text"
-					data-coreui-search="true">
+				<select class="form-multi-select" id="multiple-select-text" multiple
+					data-coreui-selection-type="text" data-coreui-search="true">
 					<option value="0">人類生活需要</option>
 					<option value="1">紡織；造紙</option>
 					<option value="2">作業、運輸</option>
@@ -332,9 +333,9 @@
 
 
 
-		<div class="footer">
+		<div class="foot">
 			<div class="logo"><img src="./images/logo.svg" alt=""></div>
-			<div class="footer_group">
+			<div class="foot_group">
 				<ul>
 					<li>指導單位：國家科學及技術委員會</li>
 					<li>執行單位：財團法人國家實驗研究院科技政策研究與資訊中心</li>
@@ -343,7 +344,9 @@
 					<li>地址：(106-36) 臺北市和平東路二段106號1,14-15樓</li>
 					<li>電話：(02)2737-7769</li>
 					<li>傳真：(02)2737-7836</li>
-					<li>Email：nudge@narlabs.org.tw</li>
+					<li>
+						<a href="mailto:nudge@narlabs.org.tw">Email：nudge@narlabs.org.tw</a>
+					</li>
 				</ul>
 				<ul>
 					<li>
@@ -356,23 +359,23 @@
 
 
 		<!-- 打開加上on -->
-		<div id="alert" class="alert">
-			<div class="alert_box">
-				<div class="alert_head">
-					<div class="alert_head_title">腫瘤標靶胜肽及其用於檢測及治療癌症之用途腫瘤標靶胜肽及其用於檢測及治療癌症之用途腫瘤標靶胜肽及其用於</div>
-					<button id="alert_close" class="icon_btn _close"></button>
+		<div id="pupup" class="pupup">
+			<div class="pupup_box">
+				<div class="pupup_head">
+					<div class="pupup_head_title">腫瘤標靶胜肽及其用於檢測及治療癌症之用途腫瘤標靶胜肽及其用於檢測及治療癌症之用途腫瘤標靶胜肽及其用於</div>
+					<button id="pupup_close" class="icon_btn _close"></button>
 				</div>
-				<div class="alert_body _flex">
-					<div class="alert_list" data-txt="專利證號：">I431014</div>
-					<div class="alert_list" data-txt="授證日期：">2014/03/21</div>
-					<div class="alert_list" data-txt="申請國：">臺灣</div>
-					<div class="alert_list" data-txt="申請機關：">申中央研究院中央研究院中央研究院中央</div>
-					<div class="alert_list" data-txt="單位聯絡方式：">智財技轉處</div>
-					<div class="alert_list" data-txt="單位電話：">+886-2-2787-2554</div>
-					<div class="alert_list" data-txt="單位網址：">https://iptt.sinica.edu.tw</div>
-					<div class="alert_list _full" data-txt="備註：">本部(收文號1100010775)同意該院110年2月22日智財字第1100501424號函申請終止維護專利
+				<div class="pupup_body _flex">
+					<div class="pupup_list" data-txt="專利證號：">I431014</div>
+					<div class="pupup_list" data-txt="授證日期：">2014/03/21</div>
+					<div class="pupup_list" data-txt="申請國：">臺灣</div>
+					<div class="pupup_list" data-txt="申請機關：">申中央研究院中央研究院中央研究院中央</div>
+					<div class="pupup_list" data-txt="單位聯絡方式：">智財技轉處</div>
+					<div class="pupup_list" data-txt="單位電話：">+886-2-2787-2554</div>
+					<div class="pupup_list" data-txt="單位網址：">https://iptt.sinica.edu.tw</div>
+					<div class="pupup_list _full" data-txt="備註：">本部(收文號1100010775)同意該院110年2月22日智財字第1100501424號函申請終止維護專利
 						（中央研究院）</div>
-					<div class="alert_list _full" data-txt="技術說明：">
+					<div class="pupup_list _full" data-txt="技術說明：">
 						本發明係提供一種靶向癌幹細胞的合成胜肽。該胜肽係由SEQ ID NO：1至SEQ ID NO：15中
 						任一者之胺基酸序列組成。本發明亦提供一種組合物，包含所述合成胜肽，其具有接合至其上之治療劑，以及一醫藥上可接受之載體或稀釋劑。本發明更提供一種篩選特異性靶向癌幹細胞 
 						之胜肽的方法。該方法之步驟包含利用噬菌體表現系統建立寡胜肽庫、以癌細胞株之腫瘤實質細胞培養物接觸該庫、以該癌細胞株之癌幹細胞培養物接觸未結合至該腫瘤實質細胞之噬菌體、及由結合至癌幹細胞之噬菌體篩選特異性靶向癌幹細胞之胜肽。
@@ -389,14 +392,26 @@
 	<script src="./js/highcharts.js"></script>
 	<script src="./js/circle.js"></script>
 	<script src="./js/result.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.3.2/dist/js/coreui.bundle.min.js"
+
+	<script src="./js/coreui.bundle.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.3.2/dist/js/coreui.bundle.min.js"
 		integrity="sha384-yaqfDd6oGMfSWamMxEH/evLG9NWG7Q5GHtcIfz8Zg1mVyx2JJ/IRPrA28UOLwAhi"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.4/dist/js/coreui.bundle.min.js"
+		crossorigin="anonymous"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.4/dist/js/coreui.bundle.min.js"
 		integrity="sha384-J57aCZcRcbraFuQaL18wp1fDE0fLyO7Il/jKACMovk4ddxUIvjRK5ZZnqcHuBF/T"
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script> -->
 
 
+	<script>
+		window.onload = function (params) {
+			var inpP = document.querySelectorAll(".form-multi-select-search")
+			inpP[0].setAttribute('placeholder','國家')
+			inpP[1].setAttribute('placeholder','申請機關')
+			inpP[2].setAttribute('placeholder','IPC 分類')
+			console.log('asdf', aaa);
+		}
+
+	</script>
 </body>
 
 </html>

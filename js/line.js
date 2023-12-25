@@ -36,7 +36,7 @@ Highcharts.chart('container', {
     },
     tooltip: {
         formatter: function() {
-            return this.y*100+'Billion';
+            return this.y;
         }
         // pointFormat: '{point.y} Billion',
         // shared: true
@@ -59,7 +59,7 @@ Highcharts.chart('container', {
             enabled: true,
             formatter: function () {
                 console.log(this); // 會有五次console，每一次代表一個數據點
-                return parseInt(this.y * 100) + 'Billion' // 數據點物件中 y 屬性即數據點數值
+                return this.y // 數據點物件中 y 屬性即數據點數值
             }
         }
     },],

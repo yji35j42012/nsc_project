@@ -42,19 +42,19 @@ for (let i = 0; i < selHandler.length; i++) {
 }
 
 
-var alert = document.querySelector("#alert")
-var alert_close = document.querySelector("#alert_close")
+var pupup = document.querySelector("#pupup")
+var pupup_close = document.querySelector("#pupup_close")
 
 var result_item = document.querySelectorAll("[name='result_item']")
 console.log('result_item', result_item);
 for (let i = 0; i < result_item.length; i++) {
     const element = result_item[i];
     element.onclick = function () {
-        alert.classList.add("on")
+        pupup.classList.add("on")
     }
 }
-alert_close.onclick = function () {
-    alert.classList.remove("on")
+pupup_close.onclick = function () {
+    pupup.classList.remove("on")
 }
 
 

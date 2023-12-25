@@ -48,8 +48,8 @@ $(document).ready(function () {
     }
     var series = [{
         data: circleData.data,
-        size: '65%',
-        innerSize: "50%",
+        size: '90%',
+        innerSize: "70%",
     }]
 
     var series1 = [{
@@ -147,8 +147,8 @@ $(document).ready(function () {
     }
     var series1 = [{
         data: circleData1.data,
-        size: '65%',
-        innerSize: "50%",
+        size: '90%',
+        innerSize: "70%",
     }]
     var plotOptions1 = {
         pie: {

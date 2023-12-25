@@ -132,6 +132,7 @@ h2 {
 }
 
 .wrap {
+  min-width: 1440px;
   padding-top: 84px;
 }
 
@@ -144,9 +145,14 @@ h2 {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-width: 1440px;
   height: 84px;
   padding: 0 20px;
   background-color: #285F40;
+}
+.head a {
+  position: relative;
+  text-decoration: none !important;
 }
 .head .logo {
   display: flex;
@@ -156,6 +162,12 @@ h2 {
 .head .logo img {
   width: 300px;
   margin-right: 60px;
+}
+.head .logo::after {
+  position: absolute;
+  left: 100%;
+  pointer-events: none;
+  white-space: nowrap;
 }
 .head .logo.hide::after {
   display: none;
@@ -171,8 +183,9 @@ h2 {
 .banner_txt {
   position: absolute;
   top: 30px;
-  left: 76px;
+  left: 0;
   width: 100%;
+  padding: 0 76px;
 }
 .banner h1 {
   max-width: 700px;
@@ -203,6 +216,7 @@ h2 {
   align-items: flex-start;
   width: 100%;
   max-width: 1440px;
+  min-width: 1430px;
   height: 521px;
   margin: auto;
   padding: 0 70px;
@@ -463,16 +477,17 @@ h2 {
   color: #47BD4D;
 }
 .most_item_title {
+  height: 55px;
   color: #545454;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 101%;
+  line-height: 30px;
   /* 24.24px */
   text-transform: uppercase;
 }
 .most_item_num {
-  margin-top: 25px;
+  margin-top: 10px;
   color: #47BD4D;
   font-size: 42px;
   font-style: normal;
@@ -508,7 +523,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
 }
 .circle_item::after {
   content: attr(data-txt);
@@ -556,15 +571,15 @@ h2 {
   text-transform: uppercase;
 }
 
-.footer {
+.foot {
   min-height: 433px;
   padding: 50px;
   background-color: #285F40;
 }
-.footer .logo {
+.foot .logo {
   width: 378px;
 }
-.footer_group {
+.foot_group {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
@@ -574,8 +589,20 @@ h2 {
   font-weight: 400;
   line-height: normal;
 }
-.footer_group li + li {
+.foot_group li + li {
   margin-top: 16px;
+}
+.foot_group a {
+  color: #fff;
+  text-decoration: none;
+}
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .foot_group a:hover {
+    text-decoration: underline;
+  }
+}
+.foot_group a:active {
+  text-decoration: underline;
 }
 
 .result_txt {
@@ -976,7 +1003,8 @@ h2 {
 .highcharts-credits,
 .line .highcharts-legend,
 .result .highcharts-label,
-.result_circle .highcharts-data-label-connector, .highcharts-text-outline .point_num {
+.result_circle .highcharts-data-label-connector,
+.highcharts-text-outline .point_num {
   display: none !important;
 }
 
@@ -1013,7 +1041,7 @@ h2 {
   fill: #fff !important;
 }
 
-.alert {
+.pupup {
   z-index: 10;
   position: fixed;
   top: 0;
@@ -1026,14 +1054,14 @@ h2 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.alert.on {
+.pupup.on {
   display: flex;
 }
-.alert_box {
+.pupup_box {
   width: 100%;
   max-width: 900px;
 }
-.alert_head {
+.pupup_head {
   position: relative;
   display: flex;
   justify-content: none;
@@ -1043,24 +1071,24 @@ h2 {
   padding: 0 50px;
   background-color: #9BDA67;
 }
-.alert_head_title {
+.pupup_head_title {
   color: #545454;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-.alert_body {
+.pupup_body {
   width: 100%;
   max-height: 570px;
   padding: 25px 50px;
   background-color: #fff;
 }
-.alert_body._flex {
+.pupup_body._flex {
   display: flex;
   flex-wrap: wrap;
 }
-.alert_list {
+.pupup_list {
   display: flex;
   width: 50%;
   margin-bottom: 25px;
@@ -1070,7 +1098,7 @@ h2 {
   font-weight: 700;
   line-height: normal;
 }
-.alert_list::before {
+.pupup_list::before {
   flex: none;
   content: attr(data-txt);
   display: block;
@@ -1081,15 +1109,16 @@ h2 {
   line-height: normal;
   text-align: right;
 }
-.alert_list:nth-child(even)::before {
+.pupup_list:nth-child(even)::before {
   width: 110px;
 }
-.alert_list._full {
+.pupup_list._full {
   width: 100%;
 }
 
 .form-multi-select {
-  max-width: 390px;
+  flex: none;
+  width: 390px !important;
   height: 42px !important;
 }
 
@@ -1108,4 +1137,14 @@ h2 {
   width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.line .highcharts-axis-title {
+  font-size: 12px;
+}
+
+.circle_group .highcharts-container,
+.circle_group #circleContainer1,
+.circle_group #circleContainer {
+  width: 100% !important;
 }/*# sourceMappingURL=all.css.map */

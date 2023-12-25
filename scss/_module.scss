@@ -134,6 +134,7 @@ h2 {
 }
 
 .wrap {
+	min-width: 1440px;
 	padding-top: 84px;
 	// background-color: #F1F2F7;
 }
@@ -145,9 +146,15 @@ h2 {
 	left: 0;
 	@include d_f(flex, space-between, center);
 	width: 100%;
+	min-width: 1440px;
 	height: 84px;
 	padding: 0 20px;
 	background-color: #285F40;
+
+	a {
+		position: relative;
+		text-decoration: none !important;
+	}
 
 	.logo {
 		@include d_f(flex, none, center);
@@ -157,7 +164,12 @@ h2 {
 			margin-right: 60px;
 		}
 	}
-
+	.logo::after{
+		position: absolute;
+		left: 100%;
+		pointer-events: none;
+		white-space: nowrap;
+	}
 	.logo.hide::after {
 		display: none;
 	}
@@ -175,8 +187,9 @@ h2 {
 	&_txt {
 		position: absolute;
 		top: 30px;
-		left: 76px;
+		left: 0;
 		width: 100%;
+		padding: 0 76px;
 	}
 
 	h1 {
@@ -208,6 +221,7 @@ h2 {
 	@include d_f(flex, center, flex-start);
 	width: 100%;
 	max-width: 1440px;
+	min-width: 1430px;
 	height: 521px;
 	margin: auto;
 	padding: 0 70px;
@@ -528,18 +542,19 @@ h2 {
 
 		// .most_item_title
 		&_title {
+			height: 55px;
 			color: #545454;
 			font-size: 24px;
 			font-style: normal;
 			font-weight: 700;
-			line-height: 101%;
+			line-height: 30px;
 			/* 24.24px */
 			text-transform: uppercase;
 		}
 
 		// .most_item_num
 		&_num {
-			margin-top: 25px;
+			margin-top: 10px;
 			color: #47BD4D;
 			font-size: 42px;
 			font-style: normal;
@@ -579,7 +594,7 @@ h2 {
 	&_item {
 		position: relative;
 		@include d_f(flex, center, center);
-		width: 50%;
+		width: 100%;
 
 		&::after {
 			content: attr(data-txt);
@@ -635,7 +650,7 @@ h2 {
 
 
 
-.footer {
+.foot {
 	min-height: 433px;
 	padding: 50px;
 	background-color: #285F40;
@@ -644,7 +659,7 @@ h2 {
 		width: 378px;
 	}
 
-	// .footer_group
+	// .foot_group
 	&_group {
 		@include d_f(flex, space-between);
 		margin-top: 50px;
@@ -656,6 +671,16 @@ h2 {
 
 		li+li {
 			margin-top: 16px;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+
+			@include hoverHandler {
+				text-decoration: underline;
+
+			}
 		}
 	}
 }
@@ -1136,7 +1161,8 @@ h2 {
 .highcharts-credits,
 .line .highcharts-legend,
 .result .highcharts-label,
-.result_circle .highcharts-data-label-connector,.highcharts-text-outline .point_num {
+.result_circle .highcharts-data-label-connector,
+.highcharts-text-outline .point_num {
 	display: none !important;
 }
 
@@ -1176,7 +1202,7 @@ h2 {
 	fill: #fff !important;
 }
 
-.alert {
+.pupup {
 	z-index: 10;
 	position: fixed;
 	top: 0;
@@ -1192,13 +1218,13 @@ h2 {
 		display: flex;
 	}
 
-	// .alert_box
+	// .pupup_box
 	&_box {
 		width: 100%;
 		max-width: 900px;
 	}
 
-	// .alert_head
+	// .pupup_head
 	&_head {
 		position: relative;
 		@include d_f(flex, none, center);
@@ -1207,7 +1233,7 @@ h2 {
 		padding: 0 50px;
 		background-color: #9BDA67;
 
-		// .alert_head_title
+		// .pupup_head_title
 		&_title {
 			color: #545454;
 			font-size: 16px;
@@ -1217,7 +1243,7 @@ h2 {
 		}
 	}
 
-	// .alert_body
+	// .pupup_body
 	&_body {
 		width: 100%;
 		max-height: 570px;
@@ -1230,7 +1256,7 @@ h2 {
 		}
 	}
 
-	// .alert_list
+	// .pupup_list
 	&_list {
 		@include d_f(flex);
 		width: 50%;
@@ -1263,23 +1289,37 @@ h2 {
 	}
 }
 
-.form-multi-select{
-	max-width: 390px;
+.form-multi-select {
+	flex: none;
+	width: 390px !important;
 	height: 42px !important;
 }
-.form-multi-select+.form-multi-select{
+
+.form-multi-select+.form-multi-select {
 	margin-left: 20px;
 
 }
+
 .form-multi-select.show .form-multi-select-search[size],
-.form-multi-select-selection:empty{
+.form-multi-select-selection:empty {
 	display: none !important;
 }
-.form-multi-select-selection{
+
+.form-multi-select-selection {
 	display: inline-block !important;
 	overflow: hidden;
 	width: 100%;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 
+}
+
+.line .highcharts-axis-title {
+	font-size: 12px;
+}
+
+.circle_group .highcharts-container,
+.circle_group #circleContainer1,
+.circle_group #circleContainer {
+	width: 100% !important;
 }
