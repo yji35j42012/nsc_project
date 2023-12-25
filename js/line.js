@@ -20,13 +20,26 @@ Highcharts.chart('container', {
         gridLineWidth: 1,
     },
     yAxis: {
-        min: 0,
+        min: 150,
         max: 340,
         title: {
             text: '單位：億'
         },
         tickAmount: 12,
+          labels: {
+            format: '{value}'
+        }
+        // tickPositioner() {
+        //     return  [273.82, 273.12, 283.99, 276.00, 291.67, 179.82, 313.33, 317.00, 311.66, 294.94,];
+        // },
         // categories: [0, 150, 170,190,210, 230, 250, 270, 280,300,320,340],
+    },
+    tooltip: {
+        formatter: function() {
+            return this.y*100+'Billion';
+        }
+        // pointFormat: '{point.y} Billion',
+        // shared: true
     },
     plotOptions: {
         line: {
@@ -38,8 +51,19 @@ Highcharts.chart('container', {
     },
     series: [{
         // name: 'Reggane',
-        data: [273.82, 273.12, 283.99, 276.00, 291.67, 179.82, 313.33, 317.00, 311.66, 294.94,]
-    },]
+        // data: [27382, 27312, 28399, 27600, 29167, 17982, 31333, 31700, 31166, 29494,],
+        data: [273.82, 273.12, 283.99, 276.00, 291.67, 179.82, 313.33, 317.00, 311.66, 294.94,],
+        // showM:[27382, 27312, 28399, 27600, 29167, 17982, 31333, 31700, 31166, 29494,],
+        color: "#0E9CFF",
+        dataLabels: {
+            enabled: true,
+            formatter: function () {
+                console.log(this); // 會有五次console，每一次代表一個數據點
+                return parseInt(this.y * 100) + 'Billion' // 數據點物件中 y 屬性即數據點數值
+            }
+        }
+    },],
+
 });
 
 
@@ -75,24 +99,28 @@ Highcharts.chart('container1', {
             enabled: true,
             showFull: false
         },
-        tickPositioner() {
-            return [0, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000];
-        },
-        // labels: [0,150],
-        // categories:['0','150']
-        // categories: ['0', '15000', '17000', '19000', '21000', '23000', '25000', '27000', '28000', '30000', '32000', '34000']
+
+        labels: {
+            format: '{value}'
+        }
+    },
+    tooltip: {
+        pointFormat: '{point.y}',
+        shared: true
     },
     plotOptions: {
         line: {
             dataLabels: {
                 enabled: true
             },
-            enableMouseTracking: false
+            enableMouseTracking: true
         }
     },
+
     series: [{
         // name: 'Reggane',
-        data: [16010, 15533, 15150, 15224, 15276, 10986, 14336, 14005, 13877, 13835,]
+        data: [16010, 15533, 15150, 15224, 15276, 10986, 14336, 14005, 13877, 13835,],
+        color: "#68D000",
     },]
 });
 
@@ -117,7 +145,7 @@ Highcharts.chart('container2', {
         gridLineWidth: 1,
     },
     yAxis: {
-        min: 0,
+        min: 1000,
         max: 2000,
         title: {
             text: '單位：件數'
@@ -135,11 +163,12 @@ Highcharts.chart('container2', {
             dataLabels: {
                 enabled: true
             },
-            enableMouseTracking: false
+            enableMouseTracking: true
         }
     },
     series: [{
         // name: 'Reggane',
-        data: [1204, 1709, 1540, 1293, 1198, 1256, 1311, 1227, 1318, 1093,]
+        data: [1204, 1709, 1540, 1293, 1198, 1256, 1311, 1227, 1318, 1093,],
+        color: "#E3A400"
     },]
 });

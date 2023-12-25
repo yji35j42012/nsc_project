@@ -50,6 +50,7 @@ h2 {
 	&._enterprise {
 		background-image: url('../images/icon_enterprise.svg');
 	}
+
 	&._share {
 		background-image: url('../images/icon_share.svg');
 	}
@@ -1057,15 +1058,17 @@ h2 {
 		transform: translateX(-18%);
 	}
 
-	.result_circleColor{
+	.result_circleColor {
 		position: absolute;
 		top: 0;
 		right: 0;
 		height: 100%;
-		@include d_f(flex,center,flex-start);
+		@include d_f(flex, center, flex-start);
 		flex-direction: column;
-		li{
-			@include d_f(flex,none,center);
+
+		li {
+			@include d_f(flex, none, center);
+
 			.colorBox {
 				width: 20px;
 				height: 20px;
@@ -1073,7 +1076,7 @@ h2 {
 				// background: #B567DA;
 				margin-right: 5px;
 			}
-		
+
 			.colorTitle {
 				color: #545454;
 				font-size: 16px;
@@ -1085,6 +1088,7 @@ h2 {
 			}
 
 		}
+
 		li+li {
 			margin-top: 20px;
 		}
@@ -1131,7 +1135,8 @@ h2 {
 .highcharts-subtitle,
 .highcharts-credits,
 .line .highcharts-legend,
-.result .highcharts-label {
+.result .highcharts-label,
+.result_circle .highcharts-data-label-connector {
 	display: none !important;
 }
 

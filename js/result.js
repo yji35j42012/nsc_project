@@ -133,7 +133,7 @@ for (let i = 0; i < circleData.data.length; i++) {
     var li = document.createElement('li')
     var li_child1 = document.createElement("div")
     li_child1.setAttribute("class", "colorBox")
-    li_child1.style=`background:${circleData.data[i].cn}`
+    li_child1.style = `background:${circleData.data[i].cn}`
     var li_child2 = document.createElement("div")
     li_child2.setAttribute("class", "colorTitle")
     li_child2.innerHTML = circleData.data[i].ns
@@ -143,3 +143,13 @@ for (let i = 0; i < circleData.data.length; i++) {
     result_circleColor.append(li)
 }
 console.log('circleData', circleData.data[0].ns);
+
+
+var searchBar_inp = document.querySelector("#searchBar_inp")
+
+searchBar_inp.addEventListener("keyup", function (e) {
+    console.log('asdf',e);
+if (e.keyCode == 13) {
+    location.href = './result.html'
+}
+});
