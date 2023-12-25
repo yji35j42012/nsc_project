@@ -976,7 +976,7 @@ h2 {
 .highcharts-credits,
 .line .highcharts-legend,
 .result .highcharts-label,
-.result_circle .highcharts-data-label-connector {
+.result_circle .highcharts-data-label-connector, .highcharts-text-outline .point_num {
   display: none !important;
 }
 
