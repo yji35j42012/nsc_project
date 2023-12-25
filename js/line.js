@@ -26,6 +26,7 @@ Highcharts.chart('container', {
             text: '單位：億'
         },
         tickAmount: 12,
+        // categories: [0, 150, 170,190,210, 230, 250, 270, 280,300,320,340],
     },
     plotOptions: {
         line: {
@@ -74,9 +75,9 @@ Highcharts.chart('container1', {
             enabled: true,
             showFull: false
         },
-        // tickPositioner() {
-        //     return [0, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000];
-        // },
+        tickPositioner() {
+            return [0, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000];
+        },
         // labels: [0,150],
         // categories:['0','150']
         // categories: ['0', '15000', '17000', '19000', '21000', '23000', '25000', '27000', '28000', '30000', '32000', '34000']
