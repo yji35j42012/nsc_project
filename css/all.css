@@ -940,6 +940,7 @@ h2 {
 }
 .result_circleContainer {
   transform: translateX(-18%);
+  pointer-events: none;
 }
 .result .result_circleColor {
   position: absolute;

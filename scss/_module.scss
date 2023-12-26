@@ -1081,6 +1081,7 @@ h2 {
 	// .result_circleContainer
 	&_circleContainer {
 		transform: translateX(-18%);
+		pointer-events: none;
 	}
 
 	.result_circleColor {

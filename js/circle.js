@@ -102,8 +102,8 @@ var circleData1 = {
     color: ['#25D7FE', '#2562FE',],
     //圓餅圖資料放置處
     data: [
-        { y: 43, n: "40%", ns: "國際專利申請比", cn: "#25D7FE" },
-        { y: 57, n: "60%", ns: "本國專利申請比", cn: "#2562FE" },
+        { y: 40, n: "40%", ns: "國際專利申請比", cn: "#25D7FE" },
+        { y: 60, n: "60%", ns: "本國專利申請比", cn: "#2562FE" },
     ]
 }
 $(document).ready(function () {
@@ -152,11 +152,11 @@ $(document).ready(function () {
     }]
     var plotOptions1 = {
         pie: {
-            allowPointSelect: true,
+            allowPointSelect: false,
             cursor: 'pointer',
             animation: false,
             dataLabels: {
-                enabled: true,
+                enabled: false,
                 format: `
                 <span class="point_title" style="position: absolute; top:20px; opacity: 01;">{point.ns}</span>
                 <br>  <br>
