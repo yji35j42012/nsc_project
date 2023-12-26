@@ -540,7 +540,6 @@ h2 {
   line-height: 101%;
   /* 20.2px */
   text-transform: uppercase;
-  background-color: #f1f2f7;
   border-radius: 100%;
 }
 
@@ -940,7 +939,6 @@ h2 {
 }
 .result_circleContainer {
   transform: translateX(-18%);
-  pointer-events: none;
 }
 .result .result_circleColor {
   position: absolute;
@@ -1002,7 +1000,8 @@ h2 {
 .highcharts-subtitle,
 .highcharts-credits,
 .line .highcharts-legend,
-.result .highcharts-label,
+.result .point_num,
+.result .point_title,
 .result_circle .highcharts-data-label-connector,
 .highcharts-text-outline .point_num {
   display: none !important;
