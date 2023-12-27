@@ -152,11 +152,11 @@ $(document).ready(function () {
     }]
     var plotOptions1 = {
         pie: {
-            allowPointSelect: false,
+            allowPointSelect: true,
             cursor: 'pointer',
             animation: false,
             dataLabels: {
-                enabled: false,
+                enabled: true,
                 format: `
                 <span class="point_title" style="position: absolute; top:20px; opacity: 01;">{point.ns}</span>
                 <br>  <br>
