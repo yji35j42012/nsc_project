@@ -98,8 +98,8 @@
 		</div>
 		<div class="result_info">
 			<div class="result_filter ">
-				<select class="form-multi-select" id="multiple-select-text" multiple
-					data-coreui-selection-type="text" data-coreui-search="true">
+				<select class="form-multi-select" id="multiple-select-text" multiple data-coreui-selection-type="text"
+					data-coreui-search="true">
 					<option value="0">臺灣(35)</option>
 					<option value="1">美國(16)</option>
 					<option value="2">歐洲(13)</option>
@@ -145,8 +145,8 @@
 						</label>
 					</div>
 				</label> -->
-				<select class="form-multi-select" id="multiple-select-text" multiple
-					data-coreui-selection-type="text" data-coreui-search="true">
+				<select class="form-multi-select" id="multiple-select-text" multiple data-coreui-selection-type="text"
+					data-coreui-search="true">
 					<option value="0">國立臺灣大學(35)</option>
 					<option value="1">國立師範大學(16)</option>
 					<option value="2">國立政治大學</option>
@@ -205,8 +205,8 @@
 						</label>
 					</div>
 				</label> -->
-				<select class="form-multi-select" id="multiple-select-text" multiple
-					data-coreui-selection-type="text" data-coreui-search="true">
+				<select class="form-multi-select" id="multiple-select-text" multiple data-coreui-selection-type="text"
+					data-coreui-search="true">
 					<option value="0">人類生活需要</option>
 					<option value="1">紡織；造紙</option>
 					<option value="2">作業、運輸</option>
@@ -463,24 +463,36 @@
 
 
 	<script>
-		window.onload = function (params) {
-			var inpP = document.querySelectorAll(".form-multi-select-search")
-			var close = document.querySelectorAll(".form-multi-select-selection-cleaner")
-			inpP[0].setAttribute('placeholder','國家')
-			inpP[1].setAttribute('placeholder','申請機關')
-			inpP[2].setAttribute('placeholder','IPC 分類')
+		window.onload=function (params) {
+			var html=document.querySelector('html')
+			var searchBar=document.querySelector("#searchBar");
+			var hlogo=document.querySelector("#hlogo");
+			if (html.scrollTop>80) {
+				searchBar.classList.add('fixed');
+				hlogo.classList.add('hide')
+			} else {
+				searchBar.classList.remove('fixed');
+				hlogo.classList.remove('hide')
+			}
 
-			for (let i = 0; i < close.length; i++) {
-				const element = close[i];
-				element.onclick = function () {
-					if(i==0){
-						inpP[0].setAttribute('placeholder','國家')
+
+			var inpP=document.querySelectorAll(".form-multi-select-search")
+			var close=document.querySelectorAll(".form-multi-select-selection-cleaner")
+			inpP[0].setAttribute('placeholder', '國家')
+			inpP[1].setAttribute('placeholder', '申請機關')
+			inpP[2].setAttribute('placeholder', 'IPC 分類')
+
+			for (let i=0; i<close.length; i++) {
+				const element=close[i];
+				element.onclick=function () {
+					if (i==0) {
+						inpP[0].setAttribute('placeholder', '國家')
 					}
-					if(i==1){
-						inpP[1].setAttribute('placeholder','申請機關')
+					if (i==1) {
+						inpP[1].setAttribute('placeholder', '申請機關')
 					}
-					if(i==2){
-						inpP[2].setAttribute('placeholder','IPC 分類')
+					if (i==2) {
+						inpP[2].setAttribute('placeholder', 'IPC 分類')
 					}
 				}
 			}
