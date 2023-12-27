@@ -23,7 +23,7 @@ Highcharts.chart('container', {
         min: 150,
         max: 340,
         title: {
-            text: '單位：億'
+            text: '單位：新台幣億元'
         },
         tickAmount: 12,
           labels: {

@@ -164,12 +164,14 @@ h2 {
 			margin-right: 60px;
 		}
 	}
-	.logo::after{
+
+	.logo::after {
 		position: absolute;
 		left: 100%;
 		pointer-events: none;
 		white-space: nowrap;
 	}
+
 	.logo.hide::after {
 		display: none;
 	}
@@ -1248,7 +1250,7 @@ h2 {
 	// .pupup_body
 	&_body {
 		width: 100%;
-		max-height: 570px;
+		// max-height: 570px;
 		padding: 25px 50px;
 		background-color: #fff;
 
@@ -1282,11 +1284,49 @@ h2 {
 		}
 
 		&:nth-child(even)::before {
-			width: 110px;
+			width: 115px;
 		}
 
 		&._full {
 			width: 100%;
+		}
+
+		&._other {
+			padding-left: 32px;
+			flex-wrap: wrap;
+
+			&::before {
+				width: 100%;
+				text-align: left;
+			}
+
+			a {
+				display: block;
+				color: #545454;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				text-decoration: none;
+
+				@include hoverHandler {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		// .pupup_list_a
+		&_a {
+			color: #545454;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			font-family: 'Noto Sans TC', sans-serif;
+			text-decoration: none;
+			@include hoverHandler {
+				text-decoration: underline;
+			}
 		}
 	}
 }

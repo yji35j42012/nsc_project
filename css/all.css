@@ -1079,7 +1079,6 @@ h2 {
 }
 .pupup_body {
   width: 100%;
-  max-height: 570px;
   padding: 25px 50px;
   background-color: #fff;
 }
@@ -1109,10 +1108,52 @@ h2 {
   text-align: right;
 }
 .pupup_list:nth-child(even)::before {
-  width: 110px;
+  width: 115px;
 }
 .pupup_list._full {
   width: 100%;
+}
+.pupup_list._other {
+  padding-left: 32px;
+  flex-wrap: wrap;
+}
+.pupup_list._other::before {
+  width: 100%;
+  text-align: left;
+}
+.pupup_list._other a {
+  display: block;
+  color: #545454;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .pupup_list._other a:hover {
+    text-decoration: underline;
+  }
+}
+.pupup_list._other a:active {
+  text-decoration: underline;
+}
+.pupup_list_a {
+  color: #545454;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-family: "Noto Sans TC", sans-serif;
+  text-decoration: none;
+}
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .pupup_list_a:hover {
+    text-decoration: underline;
+  }
+}
+.pupup_list_a:active {
+  text-decoration: underline;
 }
 
 .form-multi-select {
