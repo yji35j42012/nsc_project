@@ -652,9 +652,12 @@ h2 {
   flex-wrap: wrap;
 }
 .result_sort_group {
+  z-index: 1;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  background-color: #fff;
 }
 .result_sort_item {
   display: flex;
@@ -691,7 +694,6 @@ h2 {
   text-transform: uppercase;
 }
 .result_circle {
-  overflow: hidden;
   position: relative;
   width: 100%;
   max-width: 556px;
@@ -930,7 +932,8 @@ h2 {
 .result .result_circleColor {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 380px;
+  min-width: 300px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -943,6 +946,7 @@ h2 {
   align-items: center;
 }
 .result .result_circleColor li .colorBox {
+  flex: none;
   width: 20px;
   height: 20px;
   border-radius: 6px;
