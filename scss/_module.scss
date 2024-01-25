@@ -84,10 +84,15 @@ h2 {
 		height: 12px;
 		background-image: url('../images/icon_close.svg');
 	}
+
+	&._add {
+		width: 36px;
+		height: 36px;
+		background-image: url('../images/icon_add.svg');
+	}
 }
 
 .searchBar {
-	z-index: 9;
 	overflow: hidden;
 	position: relative;
 	max-width: 800px;
@@ -149,6 +154,29 @@ h2 {
 	padding: 0 20px;
 	background-color: #285F40;
 
+	// .head_search
+	&_search {
+		@include d_f(flex, center, center);
+		width: 200px;
+		height: 52px;
+		border-radius: 999px;
+		background-color: #9AD867;
+		box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.25);
+		color: #285F40;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: url('../images/icon_search.svg')no-repeat center/contain;
+		}
+	}
+
 	a {
 		position: relative;
 		text-decoration: none !important;
@@ -176,7 +204,7 @@ h2 {
 }
 
 .banner {
-	overflow: hidden;
+	// overflow: hidden;
 	position: relative;
 
 	.result & {
@@ -213,17 +241,13 @@ h2 {
 }
 
 .ten {
-	position: absolute;
-	top: 502px; //418+84
-	left: 0;
-	right: 0;
+	position: relative;
 	@include d_f(flex, center, flex-start);
 	width: 100%;
 	max-width: 1440px;
 	min-width: 1430px;
-	height: 521px;
 	margin: auto;
-	padding: 0 70px;
+	padding: 140px 70px 120px;
 
 	// .ten_bg
 	&_bg {
@@ -253,8 +277,7 @@ h2 {
 
 	// .ten_title
 	&_title {
-		position: absolute;
-		top: 329px;
+		position: relative;
 		@include d_f(flex, flex-end, center);
 		width: 100%;
 		height: 110px;
@@ -268,6 +291,17 @@ h2 {
 		font-weight: 700;
 		line-height: 101%;
 		text-transform: uppercase;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #9BDA67;
+			transform: translateX(-100%);
+		}
 	}
 }
 
@@ -667,6 +701,7 @@ h2 {
 }
 
 .result {
+
 	// .result_txt
 	&_txt {
 		max-width: 800px;
