@@ -23,15 +23,22 @@
 			<a id="hlogo" class="logo msgr" data-msgr="國科會補助研發專利成果查詢" href="./index.html">
 				<img src="./images/logo.svg" alt="">
 			</a>
+			<button id="goSearch" class="head_search">前往搜尋</button>
 			<a class="icon_btn _home" href="./index.html"></a>
 		</div>
 		<div class="banner">
-			<img src="./images/result_banner.png" alt="">
+			<ul id="searchBox" class="searchBox">
+				<li class="searchBox_item">
+					<div id="searchBar" class="searchBar">
+						<input type="text" id="searchBar_inp" class="searchBar_inp"
+							placeholder="請輸入關鍵字、專利所有人、學校、國別...等">
+						<button id="searchHandler" class="icon_btn _search"></button>
+					</div>
+					<button id="search_add" class="icon_btn _add"></button>
+				</li>
+			</ul>
 		</div>
-		<div id="searchBar" class="searchBar">
-			<input type="text" id="searchBar_inp" class="searchBar_inp" placeholder="請輸入相關計畫、專利、專利所有人、學校、國別...等">\
-			<button class="icon_btn _search"></button>
-		</div>
+
 		<div class="result_txt">
 			關於<span>腫瘤標靶</span>搜尋結果
 		</div>
@@ -304,6 +311,7 @@
 	<script src="./js/jquery_min.js"></script>
 	<script src="./js/highcharts.js"></script>
 	<script src="./js/circle.js"></script>
+	<script src="./js/module.js"></script>
 	<script src="./js/result.js"></script>
 
 	<script src="./js/coreui.bundle.min.js"></script>

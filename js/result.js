@@ -1,23 +1,3 @@
-var html = document.querySelector('html')
-var searchBar = document.querySelector("#searchBar");
-var hlogo = document.querySelector("#hlogo");
-
-
-
-
-
-window.addEventListener('scroll', function (params) {
-    if (html.scrollTop > 80) {
-        searchBar.classList.add('fixed');
-        hlogo.classList.add('hide')
-    } else {
-        searchBar.classList.remove('fixed');
-        hlogo.classList.remove('hide')
-    }
-});
-
-
-
 var selHandler = document.querySelectorAll("[name='selHandler']")
 var selBox = document.querySelectorAll("[name='selBox']")
 var selHandlerCount = null
@@ -142,10 +122,3 @@ for (let i = 0; i < circleData.data.length; i++) {
 }
 
 
-var searchBar_inp = document.querySelector("#searchBar_inp")
-
-searchBar_inp.addEventListener("keyup", function (e) {
-if (e.keyCode == 13) {
-    location.href = './result.html'
-}
-});
