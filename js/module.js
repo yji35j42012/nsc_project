@@ -30,20 +30,20 @@ function upScroll(sc, go) {
     }, 1);
 }
 
-var searchBar_inp = document.querySelector("#searchBar_inp")
+var searchBar_inp=document.querySelector("#searchBar_inp")
 
 searchBar_inp.addEventListener("keyup", function (e) {
-if (e.keyCode == 13) {
-    location.href = './result.html'
-}
+    if (e.keyCode==13) {
+        location.href='./result.html'
+    }
 });
 
-var searchBar_inp = document.querySelector("#searchBar_inp")
+var searchBar_inp=document.querySelector("#searchBar_inp")
 
 searchBar_inp.addEventListener("keyup", function (e) {
-if (e.keyCode == 13) {
-    location.href = './result.html'
-}
+    if (e.keyCode==13) {
+        location.href='./result.html'
+    }
 });
 
 var search_add=document.querySelector("#search_add");
@@ -124,7 +124,7 @@ function setSearchBtn(s) {
     var setB=document.querySelector("#"+s)
     setB.onclick=function () {
         console.log('setB', setB.getAttribute("id"));
-        location.href='./result.html'        
+        location.href='./result.html'
     }
 }
 function setInput(s) {
@@ -135,4 +135,23 @@ function setInput(s) {
         }
     })
 }
+
+// 113.02.27新增
+var result_txt=document.querySelector("#result_txt");
+var searchHandler=document.querySelector("#searchHandler");
+function downScroll(sc, go) {
+    var count=20
+    this.scrollTime=setInterval(() => {
+        sc.scrollTop+=count
+        if (sc.scrollTop>=go) {
+            sc.scrollTop=go
+            clearInterval(this.scrollTime)
+        }
+    }, 1);
+}
+searchHandler.onclick=function () {
+    // 
+    downScroll(html, result_txt.offsetTop-result_txt.offsetHeight-22);
+}
+
 
